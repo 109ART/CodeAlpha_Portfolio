@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areesha Tasneem | Frontend Developer Portfolio</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- my own custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#f8fafc] text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo / Name -->
+                <div class="flex-shrink-0">
+                    <a href="#hero" class="text-xl font-bold tracking-tight text-indigo-600 hover:text-indigo-700 transition-colors">
+                        AT.
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#about" class="hover:text-indigo-600 transition-colors">About Me</a>
+                    <a href="#education" class="hover:text-indigo-600 transition-colors">Education</a>
+                    <a href="#skills" class="hover:text-indigo-600 transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-indigo-600 transition-colors">Projects</a>
+                    <a href="#achievements" class="hover:text-indigo-600 transition-colors">Achievements</a>
+                    <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Call to action button -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 transition-all shadow-sm hover:shadow active:scale-95">
+                        Hire Me
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-indigo-600 hover:bg-slate-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="h-6 w-6" id="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="hidden md:hidden bg-white border-b border-slate-100" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-indigo-600 hover:bg-slate-50">About Me</a>
+                <a href="#education" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-indigo-600 hover:bg-slate-50">Education</a>
+                <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-indigo-600 hover:bg-slate-50">Skills</a>
+                <a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-indigo-600 hover:bg-slate-50">Projects</a>
+                <a href="#achievements" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-indigo-600 hover:bg-slate-50">Achievements</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-indigo-600 hover:bg-slate-50">Contact</a>
+                <a href="#contact" class="mobile-nav-link block w-full text-center mt-2 px-4 py-2 rounded-md text-white bg-indigo-600 hover:bg-indigo-700 font-medium">Hire Me</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="hero" class="py-20 lg:py-28 bg-gradient-to-br from-slate-50 via-white to-indigo-50/30">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                    <!-- Text Side -->
+                    <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-600 border border-indigo-100 uppercase tracking-wider">
+                            Web Developer
+                        </span>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-none">
+                            Hi, I am <br>
+                            <span class="text-indigo-600 inline-block mt-2">Areesha Tasneem</span>
+                        </h1>
+                        <p class="text-lg text-slate-600 max-w-xl mx-auto md:mx-0 font-normal leading-relaxed">
+                            A passionate Computer Science student and aspiring Web Developer. I love learning new things and I am always excited to explore new internship and job opportunities in web development and beyond.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-2">
+                            <a href="#projects" class="w-full sm:w-auto text-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 transition-all shadow-sm hover:shadow active:scale-95">
+                                View My Work
+                            </a>
+                            <a href="#contact" class="w-full sm:w-auto text-center px-6 py-3 border border-slate-200 text-base font-medium rounded-lg text-slate-700 bg-white hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95">
+                                Let's Talk
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Simple Avatar -->
+                    <div class="md:col-span-5 flex justify-center">
+                        <div class="w-64 h-64 sm:w-72 sm:h-72 bg-white rounded-full border-4 border-indigo-50 shadow-md flex items-center justify-center">
+                            <svg class="w-2/3 h-2/3 text-slate-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white border-y border-slate-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900">About Me</h2>
+                    <div class="h-1 w-12 bg-indigo-600 mx-auto mt-3 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                    <!-- Profile Summary -->
+                    <div class="md:col-span-7 space-y-6">
+                        <h3 class="text-xl font-bold text-slate-900">Who I Am</h3>
+                        <p class="text-slate-600 leading-relaxed text-justify">
+                            I am a fresh Computer Science graduate (2022-2026 Batch) from the <strong>University of Education, Jauharabad Campus</strong>. With a strong academic foundation and a CGPA of <strong>3.16/4.0</strong>, I have spent my academic journey refining my logical skills in programming and data structures.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-justify">
+                            I enjoy diving into web technologies and participating in hackathons to expand my expertise. My ultimate goal is to build fluid user interfaces that deliver exceptional, clean, and interactive digital experiences.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-justify">
+                            Alongside web development, I also have a growing interest in Artificial Intelligence. I have a basic foundation in AI concepts and I am currently enrolled in an Advanced AI course to strengthen my skills further in this field.
+                        </p>
+
+                        <!-- Soft Skills Grid -->
+                        <div>
+                            <h4 class="font-semibold text-slate-800 mb-3">Core Qualities</h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="flex items-center space-x-2 text-slate-600 text-sm">
+                                    <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+                                    <span>Team Collaboration</span>
+                                </div>
+                                <div class="flex items-center space-x-2 text-slate-600 text-sm">
+                                    <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+                                    <span>Time Management</span>
+                                </div>
+                                <div class="flex items-center space-x-2 text-slate-600 text-sm">
+                                    <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+                                    <span>Effective Communication</span>
+                                </div>
+                                <div class="flex items-center space-x-2 text-slate-600 text-sm">
+                                    <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+                                    <span>Critical Thinking</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info + Resume card -->
+                    <div class="md:col-span-5 bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm space-y-4">
+                        <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-2">Quick Info</h3>
+
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start">
+                                <span class="text-slate-400 w-24 flex-shrink-0 font-medium">Email:</span>
+                                <a href="mailto:areeshatasneem7505@gmail.com" class="text-indigo-600 hover:underline break-all">
+                                    areeshatasneem7505@gmail.com
+                                </a>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-slate-400 w-24 flex-shrink-0 font-medium">Phone:</span>
+                                <span class="text-slate-700 font-medium">+92 3257686657</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-slate-400 w-24 flex-shrink-0 font-medium">Location:</span>
+                                <span class="text-slate-600">Atomic Colony Jauharabad, Pakistan</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-slate-400 w-24 flex-shrink-0 font-medium">Languages:</span>
+                                <span class="text-slate-600 font-medium">Urdu (Fluent), English (Basic)</span>
+                            </div>
+                        </div>
+
+                        <!-- Simple resume download link instead of a popup modal -->
+                        <a href="resume.pdf" download class="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-indigo-50 border border-indigo-200 text-indigo-700 text-sm font-semibold rounded-xl hover:bg-indigo-100/70 transition-colors active:scale-95">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <span>Download Resume</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-16 bg-[#f8fafc]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900">Education</h2>
+                    <div class="h-1 w-12 bg-indigo-600 mx-auto mt-3 rounded-full"></div>
+                </div>
+
+                <div class="max-w-3xl mx-auto space-y-6">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col sm:flex-row justify-between items-start gap-4 hover:shadow-md transition-shadow">
+                        <div>
+                            <span class="inline-block px-2.5 py-1 rounded-md text-xs font-semibold bg-indigo-50 text-indigo-600 mb-2">2022 - 2026</span>
+                            <h3 class="text-lg font-bold text-slate-950">Bachelor of Computer Science (BS CS)</h3>
+                            <p class="text-slate-600 text-sm mt-1">University of Education, Jauharabad Campus</p>
+                        </div>
+                        <div class="sm:text-right">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-100">
+                                CGPA: 3.16 / 4.0
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col sm:flex-row justify-between items-start gap-4 hover:shadow-md transition-shadow">
+                        <div>
+                            <span class="inline-block px-2.5 py-1 rounded-md text-xs font-semibold bg-indigo-50 text-indigo-600 mb-2">2020 - 2022</span>
+                            <h3 class="text-lg font-bold text-slate-950">ICS (Intermediate in Computer Science)</h3>
+                            <p class="text-slate-600 text-sm mt-1">PAEC Model College Jauharabad</p>
+                        </div>
+                        <div class="sm:text-right">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">
+                                Marks: 80%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 bg-white border-y border-slate-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900">My Skills</h2>
+                    <div class="h-1 w-12 bg-indigo-600 mx-auto mt-3 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Frontend Development</h3>
+                        <p class="text-sm text-slate-500 mb-4">An area I keep strengthening through hands-on projects and continuous learning.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-xs font-medium bg-white text-slate-800 rounded-lg border border-slate-200">HTML5</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-white text-slate-800 rounded-lg border border-slate-200">CSS3</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-white text-slate-800 rounded-lg border border-slate-200">Tailwind CSS</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-white text-indigo-600 rounded-lg border border-indigo-200 font-semibold">JavaScript</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-white text-indigo-600 rounded-lg border border-indigo-200 font-semibold">React.js</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Programming Core</h3>
+                        <p class="text-sm text-slate-500 mb-4">Logical problem-solving and CS fundamentals.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-xs font-medium bg-white text-slate-800 rounded-lg border border-slate-200">C++</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-white text-slate-800 rounded-lg border border-slate-200">Data Structures</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-white text-slate-800 rounded-lg border border-slate-200">Python (Basic)</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Databases & Tools</h3>
+                        <p class="text-sm text-slate-500 mb-4">Academic experience with data and tools.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-xs font-medium bg-white text-slate-800 rounded-lg border border-slate-200">SQL Server</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-white text-slate-800 rounded-lg border border-slate-200">SQLite</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-white text-slate-800 rounded-lg border border-slate-200">Android Studio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 bg-[#f8fafc]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900">Projects</h2>
+                    <div class="h-1 w-12 bg-indigo-600 mx-auto mt-3 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4 hover:shadow-md transition-shadow">
+                        <span class="text-xs font-semibold text-slate-400">May 2026</span>
+                        <h3 class="text-lg font-bold text-slate-950">Automated Sign Language Translator</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Led development of a sign language translation system with real-time gesture recognition and multilingual support.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-2">
+                            <span class="px-2 py-0.5 text-xs bg-slate-50 text-slate-600 rounded-md border border-slate-100">Python</span>
+                            <span class="px-2 py-0.5 text-xs bg-slate-50 text-slate-600 rounded-md border border-slate-100">Blender</span>
+                            <span class="px-2 py-0.5 text-xs bg-slate-50 text-slate-600 rounded-md border border-slate-100">Deepmotion</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4 hover:shadow-md transition-shadow">
+                        <span class="text-xs font-semibold text-slate-400">Dec 2024</span>
+                        <h3 class="text-lg font-bold text-slate-950">Task Organizer / To-Do App</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Task management app to create, edit and delete tasks. Uses a local SQLite database with reminder notifications.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-2">
+                            <span class="px-2 py-0.5 text-xs bg-slate-50 text-slate-600 rounded-md border border-slate-100">Kotlin</span>
+                            <span class="px-2 py-0.5 text-xs bg-slate-50 text-slate-600 rounded-md border border-slate-100">SQLite</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4 hover:shadow-md transition-shadow">
+                        <span class="text-xs font-semibold text-slate-400">May 2024</span>
+                        <h3 class="text-lg font-bold text-slate-950">Restaurant Management System</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Desktop system with full database CRUD features and ERD validation for restaurant operations.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-2">
+                            <span class="px-2 py-0.5 text-xs bg-slate-50 text-slate-600 rounded-md border border-slate-100">C#</span>
+                            <span class="px-2 py-0.5 text-xs bg-slate-50 text-slate-600 rounded-md border border-slate-100">SQL Server</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-16 bg-white border-y border-slate-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900">Achievements</h2>
+                    <div class="h-1 w-12 bg-indigo-600 mx-auto mt-3 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <h3 class="font-bold text-slate-900 mb-2">RACSIT International Conference</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Certificate for active participation in the 2nd RACSIT International Conference.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <h3 class="font-bold text-slate-900 mb-2">HRCA Award Medalist</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Awarded HRCA certificate and academic medal during ICS for excellent performance.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <h3 class="font-bold text-slate-900 mb-2">Academic Excellence</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Recognized for consistent academic dedication, maintaining A+ grades throughout intermediate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-[#f8fafc]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900">Get In Touch</h2>
+                    <div class="h-1 w-12 bg-indigo-600 mx-auto mt-3 rounded-full"></div>
+                    <p class="text-slate-500 mt-2 text-sm">Have a project or want to collaborate? Send me a message!</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                    <!-- Contact details -->
+                    <div class="md:col-span-5 bg-white p-8 rounded-2xl border border-slate-100 shadow-sm space-y-6">
+                        <h3 class="text-lg font-bold text-slate-900">My Coordinates</h3>
+                        <p class="text-slate-500 text-sm">
+                            I am based in Jauharabad. I have a genuine passion for learning and exploring new opportunities, so I am open to both internships and full-time job opportunities in web development, AI, and other related fields of Computer Science.
+                        </p>
+
+                        <div class="space-y-4 text-sm text-slate-600">
+                            <div class="flex items-center space-x-3">
+                                <span>📞 +92 3257686657</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <a href="mailto:areeshatasneem7505@gmail.com" class="hover:underline text-indigo-600">✉️ areeshatasneem7505@gmail.com</a>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span>📍 Atomic Colony Jauharabad, Pakistan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="md:col-span-7 bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                        <form id="portfolio-contact-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="name" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Your Name</label>
+                                    <input type="text" id="name" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-slate-800 text-sm focus:outline-none focus:border-indigo-500 transition-colors bg-slate-50/50" placeholder="John Doe">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Your Email</label>
+                                    <input type="email" id="email" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-slate-800 text-sm focus:outline-none focus:border-indigo-500 transition-colors bg-slate-50/50" placeholder="john@example.com">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Subject</label>
+                                <input type="text" id="subject" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-slate-800 text-sm focus:outline-none focus:border-indigo-500 transition-colors bg-slate-50/50" placeholder="Freelance Opportunity / Inquiry">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Message</label>
+                                <textarea id="message" rows="4" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-slate-800 text-sm focus:outline-none focus:border-indigo-500 transition-colors bg-slate-50/50 resize-none" placeholder="Hey Areesha, I would love to connect for..."></textarea>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-sm font-semibold rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 transition-all shadow-sm hover:shadow active:scale-[0.98]">
+                                    Send Message
+                                </button>
+                            </div>
+
+                            <!-- simple feedback message, shown/hidden by script.js -->
+                            <p id="form-feedback" class="text-sm text-emerald-600 font-medium hidden"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <p class="text-white font-bold text-lg tracking-tight">Areesha Tasneem</p>
+                    <p class="text-slate-500 text-xs mt-1">Aspiring Frontend Developer | BS CS Student</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-slate-400">
+                    <a href="#about" class="hover:text-white transition-colors">About</a>
+                    <a href="#education" class="hover:text-white transition-colors">Education</a>
+                    <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                </div>
+
+                <div class="text-slate-500 text-xs text-center md:text-right">
+                    &copy; 2026 Areesha Tasneem. Made with HTML, CSS & JS.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- my own JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
